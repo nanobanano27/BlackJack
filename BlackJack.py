@@ -53,8 +53,9 @@ if __name__ == "__main__":
                 bj.reset(deck,hand,dhand,value,dvalue)
                 continue
             elif dvalue == 21:
+                player = 'Dealer'
                 lose_count += 1
-                bj.print_hand(dhand)
+                bj.print_hand(dhand, dvalue, player)
                 print("Dealer black jack.\n")
                 bj.reset(deck, hand, dhand, value, dvalue)
                 continue
