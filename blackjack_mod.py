@@ -40,7 +40,7 @@ def value_adder(hand,value):
 def print_hand(hand,value,player):
     print(f'{player} hand:')
     for card in hand:
-        print(f'__________\n|{card[0]:>2} of {card[1]:<2}|                  :O-index={card[2]:<2}\n‾‾‾‾‾‾‾‾‾‾')
+        print(f"""{'_'*10}\n|{card[0]:>2} of {card[1]:<2}|\n{'\u203E'*10}""")
     print(f'{value:>2} = Total\n')
 
 def dealer_move(dhand,dvalue,deck,value):
