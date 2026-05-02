@@ -82,3 +82,21 @@ def end_stats(dhand,hand,value,dvalue):
     print(f'Your hand_____')
     player = 'Your'
     print_hand(hand, value, player)
+
+def play_again(play,deck,hand,dhand,value,dvalue,goodbye,error):
+    while True:
+            try:
+                again = input("---Play Again---\nPress Enter to continue\nor type anything and hit enter to quit.")
+                if again == '':
+                    reset(deck,hand,dhand,value,dvalue)
+                    play = True
+                    return play
+                elif again != '':
+                    print()
+                    print(goodbye)
+                    play = False
+                    return play
+                else:
+                    print(error)
+            except ValueError:
+                print()
